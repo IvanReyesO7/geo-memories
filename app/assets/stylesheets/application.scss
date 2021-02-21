@@ -15,6 +15,12 @@
 @import "pages/show";
 @import "pages/new";
 @import "components/footer";
+@import "components/cards";
+@import "components/polaroid";
+
+body{
+  font-family: 'Press Start 2P';
+}
 
 .banner{
   width: 100%;
@@ -38,6 +44,6 @@
 
 .flex-wrapper {
   display: flex;
-  min-height: 100vh;
+  min-height: 90vh;
   flex-direction: column;
 }

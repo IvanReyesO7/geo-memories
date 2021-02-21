@@ -1,0 +1,34 @@
+.polaroid a {
+    background: #ffffff;
+    font-family: 'Press Start 2P';
+    font-size: 10px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px 5px 30px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .polaroid a:after {
+    color: #333;
+    font-size: 10px;
+    content: attr(title);
+    position: relative;
+    top: 15px;
+  }
+  .polaroid img {
+    display: block;
+    width: 250px;
+  }
+  .polaroid a:hover {
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+
+  .polaroid{
+    a{
+      p{
+        text-decoration: none;
+        font-weight: lighter;
+        color: black;
+      }
+    }
+  }

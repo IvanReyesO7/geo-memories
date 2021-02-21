@@ -1,8 +1,22 @@
-<div class="container mt-3">
-  <h2>Here are your memories</h2>
-  <ul>
-    <%@geomems.each do |memory|%>
-      <li><%=memory.title%></li>
-    <%end%>
-  </ul>
+<div class="conatiner">
+  <div class="row justify-content-between">
+    <div class="col-12 col-lg-7">
+      <h2 class="text-center mt-3">Here are your memories</h2>
+      <div class="cards">
+        <%@geomems.each do |memory|%>
+          <div class="polaroid">
+            <a href="geomems/<%=memory.id%>" title="<%=memory.title%>">
+              <%= cl_image_tag memory.photo.key, height: 250, width: 250, crop: :fill %>
+              <p><%=memory.location%></p>
+              <p hidden id="js-coord"><%=memory.coordinates%></p>
+            </a>
+          </div>
+        <%end%>
+      </div>  
+    </div>
+    <div class="col-12 col-lg-5">
+      <div id='map' class="banner"></div>
+    </div>
+  </div>
 </div>
+<%= javascript_pack_tag 'index_map' %>

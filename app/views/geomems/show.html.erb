@@ -1,10 +1,21 @@
-<div class="container mt-3">
-  <h2><%=@geomem.title%></h2>
-  <%= cl_image_tag @geomem.photo.key, height: 300, width: 400, crop: :fill %>
-  <p><%=@geomem.description%></p>
-  <p><%=@geomem.location%></p>
-  <p id='coord'><%=@geomem.coordinates%></p>
-  <div id='map' style="width: 744px;height: 512px;"></div>
-  <%= link_to "delete", geomem_path(@geomem), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-dark"%>
+<div class="conatiner">
+  <div class="row justify-content-between">
+    <div class="col-12 col-lg-8 pl-3">
+      <div class="text-center">
+        <h2 class="text-center my-3"><%=@geomem.title%></h2>
+        <p><%=@geomem.location%></p>
+        <%= cl_image_tag @geomem.photo.key, height: 500, crop: :fill %>
+        <div class="card mt-3">
+          <p><%=@geomem.description%></p>
+          <div class="options d-flex justify-content-center">
+            <%= link_to "", geomem_path(@geomem), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-danger fas fa-trash-alt"%>
+            <%= link_to "", edit_geomem_path, class:"btn btn-primary fas fa-edit" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-4">
+      <div id='map'></div>
+    </div>
 </div>
-<%= javascript_pack_tag 'show_map' %>
+<!--<%= javascript_pack_tag 'show_map' %>-->

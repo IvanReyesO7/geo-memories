@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>New memory</h2>
+  <%= simple_form_for @geomem do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description%>
+    <%= f.input :location%>
+    <div id="location-results"class="list-group"></div>
+    <%= f.hidden_field :coordinates%>
+    <%= f.submit "Create memory", class: "btn btn-primary" %>
+  <%end%>
+</div>
+
+<%= javascript_pack_tag 'new_autocomplete' %>

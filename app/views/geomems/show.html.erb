@@ -1,5 +1,6 @@
 <div class="container mt-3">
   <h2><%=@geomem.title%></h2>
+  <%= cl_image_tag @geomem.photo.key, height: 300, width: 400, crop: :fill %>
   <p><%=@geomem.description%></p>
   <p><%=@geomem.location%></p>
   <p><%=@geomem.coordinates%></p>

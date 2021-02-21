@@ -4,6 +4,7 @@
     <%= f.input :title %>
     <%= f.input :description%>
     <%= f.input :location%>
+    <%= f.input :photo, as: :file %>
     <div id="location-results"class="list-group"></div>
     <%= f.hidden_field :coordinates%>
     <%= f.submit "Create memory", class: "btn btn-primary" %>

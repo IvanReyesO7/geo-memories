@@ -43,7 +43,7 @@ class GeomemsController < ApplicationController
   private
 
   def geomem_params
-    params.require(:geomem).permit(:title, :description, :location, :coordinates)
+    params.require(:geomem).permit(:title, :description, :photo, :location, :coordinates)
   end
 
 end

@@ -3,6 +3,8 @@
   <%= cl_image_tag @geomem.photo.key, height: 300, width: 400, crop: :fill %>
   <p><%=@geomem.description%></p>
   <p><%=@geomem.location%></p>
-  <p><%=@geomem.coordinates%></p>
+  <p id='coord'><%=@geomem.coordinates%></p>
+  <div id='map' style="width: 744px;height: 512px;"></div>
   <%= link_to "delete", geomem_path(@geomem), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-dark"%>
 </div>
+<%= javascript_pack_tag 'show_map' %>

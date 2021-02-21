@@ -14,6 +14,7 @@
 @import "pages/index";
 @import "pages/show";
 @import "pages/new";
+@import "pages/edit";
 @import "components/footer";
 @import "components/cards";
 @import "components/polaroid";
@@ -46,4 +47,9 @@ body{
   display: flex;
   min-height: 90vh;
   flex-direction: column;
+}
+
+.add-new{
+  padding-right: 16px;
+  padding-top: 6px;
 }

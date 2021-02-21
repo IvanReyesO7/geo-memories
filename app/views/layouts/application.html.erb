@@ -16,10 +16,13 @@
   
   <body>
     <div class="flex-wrapper">
-      <div class="banner">
+      <div class="banner d-flex justify-content-between">
         <div class="logo">
           <%= image_tag 'world.png', height: 35, width: 35 %>
           <%= link_to "Geo-Memories" , geomems_path %>
+        </div>
+        <div class="add-new">
+          <%= link_to "", new_geomem_path, class: "btn btn-success fas fa-plus-square" %>
         </div>
       </div>
       <%= yield %>

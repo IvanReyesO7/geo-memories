@@ -1,6 +1,16 @@
 class GeomemsController < ApplicationController
   def index
     @geomems = Geomem.all
+    @markers = []
+    @geomems.each do |memory|
+      @markers << {
+        lat: memory.coordinates.split(",").map(&:to_f)[1],
+        lng: memory.coordinates.split(",").map(&:to_f)[0],
+        image_url: helpers.asset_url('world.png'),
+        id: memory.id
+
+      }
+    end
   end
 
   def show

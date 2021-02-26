@@ -1,6 +1,5 @@
-const polaroids = document.querySelectorAll(".polaroid");
+const polaroids = document.querySelectorAll(".polaroidnew");
 console.log(polaroids);
-
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiaXZhbnJleWVzbzciLCJhIjoiY2trcnVyb2Z5MDB3ZTJvbXA4MTZ1aGt4YiJ9.7lE4xg5oMtbhAj9Q-5kn9g';
   var map = new mapboxgl.Map({

@@ -1,20 +1,21 @@
 <div class="conatiner">
   <div class="row justify-content-between">
-    <div class="col-12 col-lg-7">
-      <h2 class="text-center mt-3">Here are your memories</h2>
+    <div class="col-12 col-md-12 col-lg-8" style="padding: 36px;">
+      <h2 class="text-center my-3"><i class="fas fa-heart"></i> Here are your memories <i class="fas fa-heart"></i></h2>
       <div class="cards">
         <%@geomems.each do |memory|%>
-          <div class="polaroid">
-            <a href="geomems/<%=memory.id%>" title="<%=memory.title%>">
+          <%= link_to geomem_path(memory) do %>
+            <div class="polaroidnew">
               <%= cl_image_tag memory.photo.key, height: 250, width: 250, crop: :fill %>
-              <p><%=memory.location%></p>
+              <p class="mt-3"><%=memory.location%></p>
               <p hidden id="js-coord"><%=memory.coordinates%></p>
-            </a>
-          </div>
+              <p class="pol-title"><%=memory.title%></p>
+            </div>
+          <%end%>
         <%end%>
       </div>  
     </div>
-    <div class="col-12 col-lg-5">
+    <div class="col-12 col-md-12 col-lg-4">
       <div id='map' class="banner"></div>
     </div>
   </div>

@@ -23,12 +23,36 @@
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
   }
 
-  .polaroid{
-    a{
-      p{
-        text-decoration: none;
-        font-weight: lighter;
-        color: black;
-      }
+  .polaroidnew{
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    text-align: center;
+    height: 100%;
+    width: 280px;
+    padding: 16px;
+    p{
+      text-decoration: none;
+      font-weight: lighter;
+      color: black;
+    }
+    &:hover{
+      color: black;
+      text-decoration: none;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+    img {
+      display: block;
+      width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .pol-title{
+      
     }
   }
+a{
+  p{
+    text-decoration: none;
+  }
+}

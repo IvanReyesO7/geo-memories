@@ -6,15 +6,20 @@ class GeomemsController < ApplicationController
       @markers << {
         lat: memory.coordinates.split(",").map(&:to_f)[1],
         lng: memory.coordinates.split(",").map(&:to_f)[0],
-        image_url: helpers.asset_url('world.png'),
+        image_url: memory.photo.key,
         id: memory.id
-
       }
     end
   end
 
   def show
     @geomem = Geomem.find(params[:id])
+    @markers = [{
+      lat: @geomem.coordinates.split(",").map(&:to_f)[1],
+      lng: @geomem.coordinates.split(",").map(&:to_f)[0],
+      image_url: @geomem.photo.key,
+      id: @geomem.id
+    }]
   end
 
   def new

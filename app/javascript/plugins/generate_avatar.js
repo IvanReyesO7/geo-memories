@@ -6,7 +6,7 @@ const generateAvatar = () => {
   const spaceArr = Array.prototype.slice.call(space);
   if (spaceArr){
     spaceArr.forEach(element => {
-      let options = {width: 50, height: 50, radius: 50, background: "purple"};
+      let options = {width: 60, height: 60, radius: 50, background: "purple"};
       let avatars = new Avatars(sprites, options);
       let svg = avatars.create(`${Math.floor((Math.random() * 200) + 1)}`);
       element.innerHTML = `${svg}`

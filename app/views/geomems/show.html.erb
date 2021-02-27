@@ -19,15 +19,25 @@
         <%= simple_form_for([ @geomem, @comment ]) do |f| %>
           <%= f.input :username%>
           <%= f.input :content, as: :text %>
-          <%= f.button :submit %>
+          <div class="f-flex">
+            <%= f.button :submit %>
+            <a id="cancel-btn" href="#" onclick="return false;">Cancel</a>
+          </div>
         <% end %>
       </div>
       <%if @geomem.comments.any?%>
         <%@geomem.comments.each do |comment|%>
-          <div class="card comment d-flex">
+          <div class="comment">
             <div class="comment-avatar"></div>
-            <div>
+            <div class ="comment-content">
               <p><%=comment.username%></p>
+              <%if (Time.zone.now.day - comment.created_at.day) > 1%>
+                <p class="post-date">Posted <%=Time.zone.now.day - comment.created_at.day%> days ago</p>
+              <%elsif (Time.zone.now.day - comment.created_at.day) == 1 %>
+                <p class="post-date">Posted yesterday</p>
+              <%else%>
+                <p class="post-date">Posted today</p>
+              <%end%>
               <p><%=comment.content%></p>
             </div>
           </div>

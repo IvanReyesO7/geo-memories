@@ -14,6 +14,7 @@ class GeomemsController < ApplicationController
 
   def show
     @geomem = Geomem.find(params[:id])
+    @comment = Comment.new
     @markers = [{
       lat: @geomem.coordinates.split(",").map(&:to_f)[1],
       lng: @geomem.coordinates.split(",").map(&:to_f)[0],

@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   def create
-    @geomem = Geomem.find(params[:id])
+    @geomem = Geomem.find(params[:geomem_id])
     @comment = Comment.new(comment_params)
     @comment.geomem = @geomem
     if @comment.save

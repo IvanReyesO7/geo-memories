@@ -16,7 +16,7 @@
       </div>
       <a id="show-link" href="#" onclick="return false;">Dont be shy, leave a comment!</a>
       <div class="container comm-box">
-        <%= simple_form_for([ @geomem, @comment ], remote: true) do |f| %>
+        <%= simple_form_for([ @geomem, @comment ]) do |f| %>
           <%= f.input :username%>
           <%= f.input :content, as: :text %>
           <%= f.button :submit %>

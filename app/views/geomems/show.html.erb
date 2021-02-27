@@ -24,9 +24,12 @@
       </div>
       <%if @geomem.comments.any?%>
         <%@geomem.comments.each do |comment|%>
-          <div class="card comment">
-            <p><%=comment.username%></p>
-            <p><%=comment.content%></p>
+          <div class="card comment d-flex">
+            <div class="comment-avatar"></div>
+            <div>
+              <p><%=comment.username%></p>
+              <p><%=comment.content%></p>
+            </div>
           </div>
         <%end%>
       <% else %>

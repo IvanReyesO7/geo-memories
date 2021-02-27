@@ -27,6 +27,7 @@ import "bootstrap";
 import { initMapbox } from "../plugins/init_mapbox";
 import { initHover } from "../plugins/init_hover";
 import { displayBox } from "../plugins/display_box";
+import { generateAvatar } from "../plugins/generate_avatar";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
@@ -36,4 +37,5 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initHover();
   displayBox();
+  generateAvatar();
 });

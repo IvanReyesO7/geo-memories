@@ -2,6 +2,8 @@
   "name": "geo_memories",
   "private": true,
   "dependencies": {
+    "@dicebear/avatars": "^4.5.4",
+    "@dicebear/avatars-male-sprites": "^4.5.4",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",

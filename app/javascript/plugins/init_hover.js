@@ -5,8 +5,8 @@ const initHover = () => {
     const Hover = (event) =>{
       const marker = document.getElementById(`marker-${event.currentTarget.id}`)
       marker.style.transition = "all 0.5s";
-      marker.style.width = '50px';
-      marker.style.height = '50px';
+      marker.style.width = '100px';
+      marker.style.height = '100px';
       };
     const HoverOut = (event) =>{
       const marker = document.getElementById(`marker-${event.currentTarget.id}`)

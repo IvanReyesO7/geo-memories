@@ -1,8 +1,8 @@
 <div class="conatiner">
   <div class="row justify-content-between">
-    <div class="col-12 col-md-12 col-lg-8" style="padding: 36px;">
-      <h2 class="text-center my-3"><i class="fas fa-heart"></i> Here are your memories <i class="fas fa-heart"></i></h2>
-      <div class="cards">
+    <div class="col-12 col-md-12 col-lg-8">
+      <h2 class="text-center mb-1"><i class="fas fa-heart"></i> Here are your memories <i class="fas fa-heart"></i></h2>
+      <div class="cards grd">
         <%@geomems.each do |memory|%>
           <%= link_to geomem_path(memory) do %>
             <div class="polaroidnew" id="<%=memory.id%>">

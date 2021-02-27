@@ -1,7 +1,9 @@
 <div class="conatiner">
   <div class="row justify-content-between">
     <div class="col-12 col-md-12 col-lg-8 mt-3">
-      <h2 class="text-center"><i class="fas fa-heart"></i> Here are your memories <i class="fas fa-heart"></i></h2>
+      <%if @geomems.count > 0%>
+        <h2 class="text-center"> <%= image_tag 'heart.png', height: 25, width: 25 %> Here are your <%=@geomems.count%> memories <%= image_tag 'heart.png', height: 25, width: 25 %></h2>
+      <%end%>
       <div class="cards grd">
         <%@geomems.each do |memory|%>
           <%= link_to geomem_path(memory) do %>

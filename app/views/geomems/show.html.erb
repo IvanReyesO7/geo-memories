@@ -22,6 +22,18 @@
           <%= f.button :submit %>
         <% end %>
       </div>
+      <%if @geomem.comments.any?%>
+        <%@geomem.comments.each do |comment|%>
+          <div class="card comment">
+            <p><%=comment.username%></p>
+            <p><%=comment.content%></p>
+          </div>
+        <%end%>
+      <% else %>
+        <div class="card">
+          <p>No comments yet, be the first!</p>
+        </div>
+      <%end%>
     </div>
     <div class="col-12 col-lg-4">
       <div id="map"

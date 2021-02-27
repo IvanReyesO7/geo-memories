@@ -1,6 +1,6 @@
 class GeomemsController < ApplicationController
   def index
-    @geomems = Geomem.all
+    @geomems = Geomem.all.order(id: :desc)
     @markers = []
     @geomems.each do |memory|
       @markers << {

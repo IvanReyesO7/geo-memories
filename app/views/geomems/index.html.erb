@@ -14,8 +14,12 @@
                 <p class="post-date">Posted <%=Time.zone.now.day - memory.created_at.day%> days ago</p>
               <%elsif (Time.zone.now.day - memory.created_at.day) == 1 %>
                 <p class="post-date">Posted yesterday</p>
+              <%elsif (Time.zone.now.hour - memory.created_at.hour) >= 1%>
+                <p class="post-date">Posted <%=Time.zone.now.hour - memory.created_at.hour%> hours ago</p>
+              <%elsif (Time.zone.now.to_a[1] - memory.created_at.to_a[1]) >= 1%>
+                <p class="post-date">Posted <%=Time.zone.now.to_a[1] - memory.created_at.to_a[1]%> minutes ago</p>
               <%else%>
-                <p class="post-date">Posted today</p>
+                <p class="post-date">Posted now</p>
               <%end%>
               <p hidden id="js-coord"><%=memory.coordinates%></p>
               <p class="pol-title"><%=memory.title%></p>

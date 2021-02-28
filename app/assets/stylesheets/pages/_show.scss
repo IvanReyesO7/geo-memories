@@ -81,9 +81,19 @@ p{
 }
 
 .send{
+  color: white;
   font-size: 10px;
   background-color: #a87ff5;
   &:hover{
     background-color: #8449f2; 
+  }
+}
+
+.cancel{
+  color: white;
+  font-size: 9px;
+  background-color: #FD1015;
+  &:hover{
+    background-color: #c41417; 
   }
 }

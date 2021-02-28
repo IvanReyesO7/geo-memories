@@ -16,14 +16,16 @@
       </div>
       <a id="show-link" href="#" onclick="return false;">Dont be shy, leave a comment!</a>
       <div class="container comm-box">
-        <%= simple_form_for([ @geomem, @comment ]) do |f| %>
-          <%= f.input :username%>
-          <%= f.input :content, as: :text %>
-          <div class="f-flex">
-            <%= f.submit "Send", class: "btn btn-primary"%>
-            <a id="cancel-btn" href="#" onclick="return false;">Cancel</a>
-          </div>
-        <% end %>
+        <div class ="p-3">
+          <%= simple_form_for([ @geomem, @comment ]) do |f| %>
+            <%= f.input :username%>
+            <%= f.input :content, as: :text %>
+            <div class="f-flex">
+              <%= f.submit "Send", class: "btn btn-primary"%>
+              <a id="cancel-btn" href="#" onclick="return false;">Cancel</a>
+            </div>
+          <% end %>
+        </div>
       </div>
       <div class="comment-section mt-3">
         <%if @geomem.comments.any?%>

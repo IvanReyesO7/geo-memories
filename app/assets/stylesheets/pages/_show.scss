@@ -35,6 +35,10 @@ p{
   height: 0px;
   font-family: 'Press Start 2P' !important;
   border-top: 16px;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 2px;
 }
 
 .comment{
@@ -66,3 +70,9 @@ p{
        padding: 0px 16px;
   }
 }
+
+.simple_form {
+  font-family: 'Press Start 2P' !important;
+  font-size: 10px;
+}
+

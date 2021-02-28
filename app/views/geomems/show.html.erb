@@ -20,7 +20,7 @@
           <%= f.input :username%>
           <%= f.input :content, as: :text %>
           <div class="f-flex">
-            <%= f.button :submit %>
+            <%= f.submit "Send", class: "btn btn-primary"%>
             <a id="cancel-btn" href="#" onclick="return false;">Cancel</a>
           </div>
         <% end %>

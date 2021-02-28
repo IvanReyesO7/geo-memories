@@ -8,6 +8,9 @@ h2{
   height: 90vh;;
   width: 100%;
   background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
 }
 
 p{

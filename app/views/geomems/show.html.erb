@@ -25,28 +25,30 @@
           </div>
         <% end %>
       </div>
-      <%if @geomem.comments.any?%>
-        <%@geomem.comments.order(created_at: :desc).each do |comment|%>
-          <div class="comment">
-            <div class="comment-avatar"></div>
-            <div class ="comment-content">
-              <p><%=comment.username%></p>
-              <%if (Time.zone.now.day - comment.created_at.day) > 1%>
-                <p class="post-date">Posted <%=Time.zone.now.day - comment.created_at.day%> days ago</p>
-              <%elsif (Time.zone.now.day - comment.created_at.day) == 1 %>
-                <p class="post-date">Posted yesterday</p>
-              <%else%>
-                <p class="post-date">Posted today</p>
-              <%end%>
-              <p><%=comment.content%></p>
+      <div class="comment-section mt-3">
+        <%if @geomem.comments.any?%>
+          <%@geomem.comments.order(created_at: :desc).each do |comment|%>
+            <div class="comment">
+              <div class="comment-avatar"></div>
+              <div class ="comment-content">
+                <p><%=comment.username%></p>
+                <%if (Time.zone.now.day - comment.created_at.day) > 1%>
+                  <p class="post-date">Posted <%=Time.zone.now.day - comment.created_at.day%> days ago</p>
+                <%elsif (Time.zone.now.day - comment.created_at.day) == 1 %>
+                  <p class="post-date">Posted yesterday</p>
+                <%else%>
+                  <p class="post-date">Posted today</p>
+                <%end%>
+                <p><%=comment.content%></p>
+              </div>
             </div>
+          <%end%>
+        <% else %>
+          <div class="card">
+            <p>No comments yet, be the first!</p>
           </div>
         <%end%>
-      <% else %>
-        <div class="card">
-          <p>No comments yet, be the first!</p>
-        </div>
-      <%end%>
+      </div>
     </div>
     <div class="col-12 col-lg-4">
       <div id="map"

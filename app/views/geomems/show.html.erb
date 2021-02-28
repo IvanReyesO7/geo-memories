@@ -4,7 +4,7 @@
       <div class="text-center">
         <h2 class="text-center my-3"><%=@geomem.title%></h2>
         <p><%=@geomem.location%></p>
-        <%= cl_image_tag @geomem.photo.key, height: 500, crop: :fill, class: "show-pic" %>
+        <%= cl_image_tag @geomem.photo.key, crop: :fill, class: "show-pic" %>
         <div class="card mt-3">
           <p><%=@geomem.description%></p>
           <p hidden id="coord"><%=@geomem.coordinates%></p>

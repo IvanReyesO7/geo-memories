@@ -6,7 +6,7 @@
       <%end%>
       <div class="cards grd">
         <%@geomems.each do |memory|%>
-          <%= link_to geomem_path(memory) do %>
+          <%= link_to geomem_path(memory), class:"wrap-a" do %>
             <div class="polaroidnew" id="<%=memory.id%>">
               <%= cl_image_tag memory.photo.key, height: 250, width: 250, crop: :fill %>
               <p class="pol-lct mt-3"><%=memory.location%></p>

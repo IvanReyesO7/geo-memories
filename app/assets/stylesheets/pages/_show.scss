@@ -51,3 +51,14 @@ p{
   padding-left: 16px;
   line-height: 8px
 }
+
+.show-pic{
+  max-width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .show-pic {
+       height: auto;
+       padding: 0px 16px;
+  }
+}

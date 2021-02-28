@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to geomem_path(@geomem)
     else
-      render 'geomems/show'
+      redirect_to geomem_path(@geomem)
     end
   end
 

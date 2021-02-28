@@ -79,3 +79,11 @@ p{
 .form-control{
   font-size: 10px;
 }
+
+.send{
+  font-size: 10px;
+  background-color: #a87ff5;
+  &:hover{
+    background-color: #8449f2; 
+  }
+}

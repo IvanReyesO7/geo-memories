@@ -20,10 +20,8 @@
           <%= simple_form_for([ @geomem, @comment ]) do |f| %>
             <%= f.input :username%>
             <%= f.input :content, as: :text %>
-            <div class="f-flex">
-              <%= f.submit "Send", class: "btn btn-primary"%>
-              <a id="cancel-btn" href="#" onclick="return false;">Cancel</a>
-            </div>
+            <%= f.submit "Send", class: "btn btn-primary send"%>
+            <a id="cancel-btn" href="#" onclick="return false;">Cancel</a>
           <% end %>
         </div>
       </div>

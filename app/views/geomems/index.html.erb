@@ -2,7 +2,7 @@
   <div class="row justify-content-between fix-scr">
     <div class="col-12 col-md-12 col-lg-8 mt-3">
       <%if @geomems.count > 0%>
-        <h2 class="text-center"> <%= image_tag 'heartp.png', height: 25, width: 25 %> Here are your <%=@geomems.count%> memories <%= image_tag 'heartp.png', height: 25, width: 25 %></h2>
+        <h2 class="text-center first-title"> <%= image_tag 'heartp.png', height: 20, width: 20 %> You have <%=@geomems.count%> memories <%= image_tag 'heartp.png', height: 20, width: 20 %></h2>
       <%end%>
       <div class="cards grd">
         <%@geomems.each do |memory|%>

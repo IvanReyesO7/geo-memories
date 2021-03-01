@@ -52,6 +52,7 @@ class GeomemsController < ApplicationController
 
   def destroy
     @geomem = Geomem.find(params[:id])
+    @geomem.comments.destroy_all if @geomem.comments.any?
     @geomem.destroy
     redirect_to geomems_path
   end

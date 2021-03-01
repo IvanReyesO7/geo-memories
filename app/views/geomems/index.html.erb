@@ -10,17 +10,7 @@
             <div class="polaroidnew" id="<%=memory.id%>">
               <%= cl_image_tag memory.photo.key, height: 250, width: 250,crop: :fill %>
               <p class="pol-lct mt-3"><%=memory.location%></p>
-              <%if (Time.zone.now.day - memory.created_at.day) > 1%>
-                <p class="post-date">Posted <%=Time.zone.now.day - memory.created_at.day%> days ago</p>
-              <%elsif (Time.zone.now.day - memory.created_at.day) == 1 %>
-                <p class="post-date">Posted yesterday</p>
-              <%elsif (Time.zone.now.hour - memory.created_at.hour) >= 1%>
-                <p class="post-date">Posted <%=Time.zone.now.hour - memory.created_at.hour%> hours ago</p>
-              <%elsif (Time.zone.now.to_a[1] - memory.created_at.to_a[1]) >= 1%>
-                <p class="post-date">Posted <%=Time.zone.now.to_a[1] - memory.created_at.to_a[1]%> minutes ago</p>
-              <%else%>
-                <p class="post-date">Posted now</p>
-              <%end%>
+              <!--Posted days ago hereeeee-->
               <p hidden id="js-coord"><%=memory.coordinates%></p>
               <p class="pol-title"><%=memory.title%></p>
             </div>

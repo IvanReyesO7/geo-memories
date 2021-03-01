@@ -32,16 +32,12 @@
               <div class="comment-avatar"></div>
               <div class ="comment-content">
                 <p><%=comment.username%></p>
-                <%if (Time.zone.now.day - comment.created_at.day) > 1%>
-                  <p class="post-date">Posted <%=Time.zone.now.day - comment.created_at.day%> days ago</p>
-                <%elsif (Time.zone.now.day - comment.created_at.day) == 1 %>
-                  <p class="post-date">Posted yesterday</p>
-                <%elsif (Time.zone.now.hour - comment.created_at.hour) >= 1%>
-                  <p class="post-date">Posted <%=Time.zone.now.hour - comment.created_at.hour%> hours ago</p>
-                <%elsif (Time.zone.now.to_a[1] - comment.created_at.to_a[1]) >= 1%>
-                  <p class="post-date">Posted <%=Time.zone.now.to_a[1] - comment.created_at.to_a[1]%> minutes ago</p>
+                <%if (Time.zone.now - comment.created_at).round >= 86400%>
+                  <p class="post-date">Posted <%=((Time.zone.now - comment.created_at)/86400).round%> days ago</p>
+                <%elsif ((Time.zone.now - comment.created_at)/3600).round >= 1%>
+                 <p class="post-date">Posted <%=((Time.zone.now - comment.created_at)/3600).round%> hours ago</p>
                 <%else%>
-                  <p class="post-date">Posted now</p>
+                  <p class="post-date" style="color:red !important;">Posted just now</p>
                 <%end%>
                 <p><%=comment.content%></p>
               </div>

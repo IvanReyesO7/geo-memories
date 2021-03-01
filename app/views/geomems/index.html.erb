@@ -11,6 +11,13 @@
               <%= cl_image_tag memory.photo.key, height: 250, width: 250,crop: :fill %>
               <p class="pol-lct mt-3"><%=memory.location%></p>
               <!--Posted days ago hereeeee-->
+              <%if (Time.zone.now - memory.created_at).round >= 86400%>
+                <p class="post-date">Posted <%=((Time.zone.now - memory.created_at)/86400).round%> days ago</p>
+              <%elsif ((Time.zone.now - memory.created_at)/3600).round >= 1%>
+                <p class="post-date">Posted <%=((Time.zone.now - memory.created_at)/3600).round%> hours ago</p>
+              <%else%>
+                <p class="post-date" style="color:red !important;">Posted just now</p>
+              <%end%>
               <p hidden id="js-coord"><%=memory.coordinates%></p>
               <p class="pol-title"><%=memory.title%></p>
             </div>

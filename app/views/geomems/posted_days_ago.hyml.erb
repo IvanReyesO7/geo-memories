@@ -1,9 +1,7 @@
-<%if (Time.zone.now.day - memory.created_at.day) > 1%>
-                <p class="post-date">Posted <%=Time.zone.now.day - memory.created_at.day%> days ago</p>
-              <%elsif (Time.zone.now.day - memory.created_at.day) == 1 %>
-                <p class="post-date">Posted yesterday</p>
-              <%elsif (Time.zone.now.hour - memory.created_at.hour) >= 1%>
-                <p class="post-date">Posted <%=Time.zone.now.hour - memory.created_at.hour%> hours ago</p>
-              <%else%>
-                <p class="post-date">Posted now</p>
-              <%end%>
+<%if (Time.zone.now - memory.created_at).floor >= 86400%>
+  <p class="post-date">Posted <%=((Time.zone.now.day - memory.created_at.day)/86400).floor%> days ago</p>
+<%elsif ((Time.zone.now - memory.created_at)/3600).floor >= 1%>
+  <p class="post-date">Posted <%=Time.zone.now.hour - memory.created_at.hour%> hours ago</p>
+<%else%>
+  <p class="post-date">Posted now</p>
+<%end%>

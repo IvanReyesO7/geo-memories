@@ -19,6 +19,7 @@ const initHover = () => {
     cards.forEach((card)=>{
       card.addEventListener("mouseover",Hover);
       card.addEventListener("mouseleave",HoverOut);
+      card.addEventListener("click", HoverOut);
       });
     }
   }

@@ -5,16 +5,16 @@
     <%= f.input :description%>
     <div class="d-flex justify-content-start">
       <%= f.input :location%>
-      <p class="mx-3">Or<p>
+      <p class="mx-3">- Or -<p>
       <div>
-        <p>Locate Me!</p>
-        <a href="#" onclick="return false;" id = "find-me">Show my location</a>
+        <p style="text-align: center">Locate Me!</p>
+        <a href="#" class="show-link" onclick="return false;" id = "find-me"><i class="fas fa-location-arrow"></i> Show my location</a>
       </div>
     </div>
     <div id="location-results"class="list-group"></div>
     <%= f.input :photo, as: :file %>
     <%= f.hidden_field :coordinates%>
-    <%= f.submit "Create memory", class: "btn btn-primary" %>
+    <%= f.submit "Create memory", class: "btn send" %>
   <%end%>
   
 </div>

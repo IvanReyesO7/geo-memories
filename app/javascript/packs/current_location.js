@@ -25,7 +25,7 @@ function geoFindMe() {
     if(!navigator.geolocation) {
         location.value = 'Geolocation is not supported by your browser';
     } else {
-      location.value = 'Locating…';
+      location.value = 'Locating...';
       navigator.geolocation.getCurrentPosition(success, error);
     }
 

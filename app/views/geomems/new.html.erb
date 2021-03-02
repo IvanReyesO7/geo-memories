@@ -1,4 +1,4 @@
-<div class="container mt-3">
+<div class="container mt-3 p-3">
   <h2>New memory</h2>
   <%= simple_form_for @geomem do |f| %>
     <%= f.input :title %>
@@ -8,7 +8,7 @@
       <p class="mx-3">- Or -<p>
       <div>
         <p style="text-align: center">Locate Me!</p>
-        <a href="#" class="show-link" onclick="return false;" id = "find-me"><i class="fas fa-location-arrow"></i> Show my location</a>
+        <a href="#" class="show-link" style="text-align: center" onclick="return false;" id = "find-me"><i class="fas fa-location-arrow"></i> Show my location</a>
       </div>
     </div>
     <div id="location-results"class="list-group"></div>

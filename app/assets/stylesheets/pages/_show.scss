@@ -5,13 +5,13 @@ h2{
 }
 
 #map{
-  height: 90vh;;
+  height: 90vh;
   width: 100%;
-  background-color: white;
   position: sticky;
   top: 0;
   z-index: 1020;
 }
+
 
 p{
   font-weight: lighter;
@@ -63,13 +63,6 @@ p{
   max-width: 500px;
 }
 
-@media screen and (max-width: 480px) {
-  .show-pic {
-      max-width: 100%; 
-      height: auto;
-       padding: 0px 16px;
-  }
-}
 
 .simple_form {
   font-family: 'Press Start 2P' !important;
@@ -97,5 +90,16 @@ p{
   &:hover{
     background-color: #c41417; 
     color: white;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .show-pic {
+      max-width: 100%; 
+      height: auto;
+       padding: 0px 16px;
+  }
+  #map{
+    height: 50vh;
   }
 }

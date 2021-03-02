@@ -3,12 +3,21 @@
   <%= simple_form_for @geomem do |f| %>
     <%= f.input :title %>
     <%= f.input :description%>
-    <%= f.input :location%>
+    <div class="d-flex justify-content-start">
+      <%= f.input :location%>
+      <p class="mx-3">- Or -<p>
+      <div>
+        <p style="text-align: center">Locate Me!</p>
+        <a href="#" class="show-link" onclick="return false;" id = "find-me"><i class="fas fa-location-arrow"></i> Show my location</a>
+      </div>
+    </div>
     <div id="location-results"class="list-group"></div>
     <%= f.input :photo, as: :file %>
     <%= f.hidden_field :coordinates%>
-    <%= f.submit "Create memory", class: "btn btn-primary" %>
+    <%= f.submit "Create memory", class: "btn send" %>
   <%end%>
+  
 </div>
 
 <%= javascript_pack_tag 'new_autocomplete' %>
+<%= javascript_pack_tag 'current_location' %>

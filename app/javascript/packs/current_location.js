@@ -14,7 +14,8 @@ function geoFindMe() {
         console.log(data);
         location.value = `${data.address.city}, ${data.address.country}`;
       });
-      coordinates.value = `${longitude},${latitude}`
+      coordinates.value = `${longitude},${latitude}`;
+      location.disabled = true;
 
     }
   

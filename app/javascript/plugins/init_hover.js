@@ -12,6 +12,7 @@ const initHover = () => {
       };
     const HoverOut = (event) =>{
       const marker = document.getElementById(`marker-${event.currentTarget.id}`)
+      marker.style.transition = "width 0.5s, height 0.5s";
       marker.style.width = '25px';
       marker.style.height = '25px';
       marker.style.zIndex = "0"

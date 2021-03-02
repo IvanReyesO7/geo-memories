@@ -9,11 +9,10 @@ function geoFindMe() {
       const longitude = position.coords.longitude;
 
       fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}`)
-      .then(response => response.json())
-      .then((data) => {
-        console.log(data);
-        location.value = `${data.address.city}, ${data.address.country}`;
-      });
+        .then(response => response.json())
+        .then((data) => {
+          location.value = `${data.address.city}, ${data.address.country}`;
+        });
       coordinates.value = `${longitude},${latitude}`;
       location.disabled = true;
 

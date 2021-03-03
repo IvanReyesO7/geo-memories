@@ -25,13 +25,29 @@
 }
 
 .add-new{
+  display: flex;
   padding-right: 16px;
   padding-top: 6px;
+  color: white;
+  a{
+    color: white;
+  }
 }
 
 .img-logo{
   position: relative;
   left: 24px;
+}
+
+.add-mem{
+  margin: 10px;
+  color: white;
+  font-size: 8px;
+  background-color: #9663f5;
+  &:hover{
+    background-color: #9360f0; 
+    color: white;
+  }
 }
 
 @media screen and (max-width: 480px) {

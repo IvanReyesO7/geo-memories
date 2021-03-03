@@ -21,9 +21,7 @@
           <%= image_tag 'world.png', height: 50, width: 59, class: "img-logo" %>
           <%= link_to "Geo-Memories" , geomems_path %>
         </div>
-        <div class="add-new">
-          <%= link_to "", new_geomem_path, class: "btn btn-success fas fa-plus-square" %>
-        </div>
+        <%= link_to "Add memory", new_geomem_path, class: "btn add-mem" %>
       </div>
       <%= yield %>
     </div>

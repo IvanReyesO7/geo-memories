@@ -43,11 +43,12 @@
   max-width: 100%;
 }
 
-@media (min-width: 100px) and (max-width: 575px) {
+@media (min-width: 100px) and (max-width: 991px) {
   .first-title{
     font-size: 12px;
   }
   #map{
     height: 50vh;
+    margin-left: 2vh;
   }
 }

@@ -13,11 +13,11 @@
               <!--Posted days ago hereeeee-->
               <%if (Time.zone.now - memory.created_at).round >= 86400%>
                 <p class="post-date">Posted <%=((Time.zone.now - memory.created_at)/86400).round%> days ago</p>
-              <%elsif ((Time.zone.now - memory.created_at)/3600).round >= 1%>
+              <%elsif ((Time.zone.now - memory.created_at)/3600).round > 1%>
                 <p class="post-date">Posted <%=((Time.zone.now - memory.created_at)/3600).round%> hours ago</p>
               <%elsif ((Time.zone.now - memory.created_at)/3600).round == 1%>
                  <p class="post-date">Posted <%=((Time.zone.now - memory.created_at)/3600).round%> hour ago</p>
-              <%elsif ((Time.zone.now - memory.created_at)/60).round >= 1%>
+              <%elsif ((Time.zone.now - memory.created_at)/60).round > 1%>
                 <p class="post-date">Posted <%=((Time.zone.now - memory.created_at)/60).round%> minutes ago</p>
               <%elsif ((Time.zone.now - comment.created_at)/60).round == 1%>
                 <p class="post-date">Posted <%=((Time.zone.now - memory.created_at)/60).round%> minute ago</p>

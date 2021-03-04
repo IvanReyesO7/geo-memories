@@ -19,6 +19,8 @@
                  <p class="post-date">Posted <%=((Time.zone.now - memory.created_at)/3600).round%> hour ago</p>
               <%elsif ((Time.zone.now - memory.created_at)/60).round >= 1%>
                 <p class="post-date">Posted <%=((Time.zone.now - memory.created_at)/60).round%> minutes ago</p>
+              <%elsif ((Time.zone.now - comment.created_at)/60).round == 1%>
+                <p class="post-date">Posted <%=((Time.zone.now - memory.created_at)/60).round%> minute ago</p>
               <%else%>
                 <p class="post-date" style="color:red !important;">Posted just now</p>
               <%end%>

@@ -1,10 +1,12 @@
-title) ? content_for(:meta_title) : DEFAULT_META["meta_title"]
+module MetaTagsHelper
+  def meta_title
+    content_for?(:meta_title) ? content_for(:meta_title) : DEFAULT_META["Geo-memories"]
   end
-
+  
   def meta_description
-    content_for?(:meta_description) ? content_for(:meta_description) : DEFAULT_META["meta_description"]
+    content_for?(:meta_description) ? content_for(:meta_description) : DEFAULT_META["Have fun storing your memories and visualize them in the map!"]
   end
-
+  
   def meta_image
     meta_image = (content_for?(:meta_image) ? content_for(:meta_image) : DEFAULT_META["meta_image"])
     # little twist to make it work equally with an asset or a url

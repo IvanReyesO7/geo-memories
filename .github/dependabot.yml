@@ -8,7 +8,8 @@ version: 2
 registries:
   maven-postal:
     type: maven-repository
-    url: https://packagecloud.io/priv/0183ed20e053523658b87ff4c44d1ac970254c28e7161597/ivanreyes_rb/maven/maven2
+    url: https://packagecloud.io/priv/ivanreyes_rb/maven/maven2
+    token: 0183ed20e053523658b87ff4c44d1ac970254c28e7161597
 updates:
   - package-ecosystem: "maven"
     directory: "/"

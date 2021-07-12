@@ -9,7 +9,7 @@ registries:
   maven-artifactory:
     type: maven-repository
     url: https://packagecloud.io/priv/postalio/java/maven2
-    usernmae: ""
+    username: ""
     password: ""
     token: ${{secrets.PC_TOKEN}}
 updates:

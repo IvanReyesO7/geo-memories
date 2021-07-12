@@ -6,12 +6,11 @@
 
 version: 2
 registries:
-  maven-github:
+  maven-artifactory:
     type: maven-repository
     url: https://packagecloud.io/priv/postalio/java/maven2
-    username: ""
-    password: ""
-    token: ${{secrets.PC_TOKEN}}
+    username: postalio
+    password: ${{secrets.PC_PASSWORD}}
 updates:
   - package-ecosystem: "maven"
     directory: "/"

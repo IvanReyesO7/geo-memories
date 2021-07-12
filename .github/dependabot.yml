@@ -9,8 +9,7 @@ registries:
   maven-postal:
     type: maven-repository
     url: https://packagecloud.io/priv/postalio/java/maven2
-    username: ${{ secrets.PC_USERNAME }}
-    password: ${{ secrets.PC_PASSWORD }}
+    token: ${{secrets.PC_TOKEN}}
 updates:
   - package-ecosystem: "maven"
     directory: "/"

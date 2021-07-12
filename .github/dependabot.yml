@@ -6,7 +6,7 @@
 
 version: 2
 registries:
-  maven-artifactory:
+  maven-postal:
     type: maven-repository
     url: https://packagecloud.io/priv/postalio/java/maven2
     username: postalio

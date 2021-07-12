@@ -8,7 +8,7 @@ version: 2
 registries:
   maven-postal:
     type: maven-repository
-    url: https://packagecloud.io/priv/ivanreyes_rb/maven/maven2
+    url: https://packagecloud.io/priv/postalio/java/maven2
     username: ${{ secrets.PC_USERNAME }}
     password: ${{ secrets.PC_PASSWORD }}
 updates:
@@ -18,3 +18,4 @@ updates:
       - maven-postal
     schedule:
       interval: "monthly"
+

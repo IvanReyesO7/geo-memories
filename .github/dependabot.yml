@@ -6,7 +6,7 @@
 
 version: 2
 registries:
-  maven-github:
+  maven-artifactory:
     type: maven-repository
     url: https://packagecloud.io/priv/postalio/java/maven2
     token: ${{secrets.PC_TOKEN}}

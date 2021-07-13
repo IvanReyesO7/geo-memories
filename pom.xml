@@ -1,0 +1,12 @@
+<repositories>
+  <repository>
+    <id>ivanreyes_rb-maven</id>
+    <url>https://packagecloud.io/priv/${token}/ivanreyes_rb/maven/maven2</url>
+    <releases>
+      <enabled>true</enabled>
+    </releases>
+    <snapshots>
+      <enabled>true</enabled>
+    </snapshots>
+  </repository>
+</repositories>

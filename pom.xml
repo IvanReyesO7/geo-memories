@@ -1,7 +1,7 @@
 <repositories>
   <repository>
     <id>ivanreyes_rb-maven</id>
-    <url>https://packagecloud.io/priv/${token}/ivanreyes_rb/maven/maven2</url>
+    <url>https://packagecloud.io/priv/97a6189210a0f04b6218bcac40c8078821b5189dc5067a3f/ivanreyes_rb/maven/maven2</url>
     <releases>
       <enabled>true</enabled>
     </releases>

@@ -10,3 +10,8 @@
     </snapshots>
   </repository>
 </repositories>
+<dependency>
+  <groupId>io.packagecloud</groupId>
+  <artifactId>packagecloud-test</artifactId>
+  <version>0.0.1</version>
+</dependency>

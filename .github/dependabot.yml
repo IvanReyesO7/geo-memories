@@ -8,7 +8,7 @@ version: 2
 registries:
   maven-postal:
     type: maven-repository
-    url: https://a7e204afaf9b.ngrok.io/priv/ivan/java/maven2
+    url: https://10a0-110-4-204-14.ngrok.io/priv/ivan/test/maven2
     username: ivan
     password: password
 updates:

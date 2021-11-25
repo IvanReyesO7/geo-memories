@@ -8,7 +8,7 @@ version: 2
 registries:
   maven-postal:
     type: maven-repository
-    url: https://0c9e-60-120-4-175.ngrok.io/ivan/arch/maven2
+    url: https://repo1.maven.org/maven2/com/octopus/randomquotes
     username: ivan
     password: password
 updates:

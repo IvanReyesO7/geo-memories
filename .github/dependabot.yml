@@ -6,23 +6,22 @@
 version: 2
 
 registries:
-packagecloud-npm:
-type: npm-registry
-url: https://packagecloud.io/syapse/General/npm/
-token: ${{secrets.PACKAGECLOUD_TOKEN}}
-
-updates:
- - package-ecosystem: docker
-   directory: /
-   schedule:
+ packagecloud-npm:
+ type: npm-registry
+ url: https://packagecloud.io/syapse/General/npm/
+ token: ${{secrets.PACKAGECLOUD_TOKEN}}
+ updates:
+  - package-ecosystem: docker
+    directory: /
+    schedule:
      interval: daily
- - package-ecosystem: npm
-   registries:
-    - packagecloud-npm:
-      directory: /
-      schedule:
+  - package-ecosystem: npm
+    registries:
+     - packagecloud-npm:
+       directory: /
+       schedule:
         interval: daily
-    - package-ecosystem: npm
-      directory: /portal-client
-      schedule:
+     - package-ecosystem: npm
+       directory: /portal-client
+       schedule:
         interval: daily

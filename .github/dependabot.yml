@@ -10,7 +10,7 @@ registries:
 packagecloud-npm:
 type: npm-registry
 url: https://packagecloud.io/syapse/General/npm/
-token: ${{secrets.PACKAGECLOUD_TOKEN}}
+token: ${{ secrets.PACKAGECLOUD_TOKEN }}
 
 updates:
 - package-ecosystem: docker

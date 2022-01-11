@@ -5,17 +5,26 @@
 
 
 version: 2
+
 registries:
-  maven-postal:
-    type: maven-repository
-    url: https://repo1.maven.org/maven2/com/octopus/randomquotes
-    username: ivan
-    password: password
+packagecloud-npm:
+type: npm-registry
+url: https://packagecloud.io/syapse/General/npm/
+token: ${{secrets.PACKAGECLOUD_TOKEN}}
+
 updates:
-  - package-ecosystem: "maven"
-    directory: "/"
-    registries:
-      - maven-postal
-    schedule:
-      interval: "monthly"
+- package-ecosystem: docker
+directory: /
+schedule:
+interval: daily
+- package-ecosystem: npm
+registries:
+- packagecloud-npm
+directory: /
+schedule:
+interval: daily
+- package-ecosystem: npm
+directory: /portal-client
+schedule:
+interval: daily
 
